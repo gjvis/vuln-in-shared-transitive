@@ -1,0 +1,1238 @@
+[
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise-two-factor@2.2.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "actionmailer@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-html-sanitizer@1.0.3",
+            "loofah@2.0.3",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    },
+    {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+        "creationTime": "2017-01-12T12:37:00.000Z",
+        "credit": [
+            "Snyk Security Research Team"
+        ],
+        "description": "## Overview\n[nokogiri](https://rubygems.org/gems/nokogiri) is a an HTML, XML, SAX, and Reader parser, with the ability to search documents via XPath or CSS3 selectors.\nAffected versions of this Gem are vulnerable to XML External Entity (XXE) attacks when opting into the `DTDLOAD` option and opting out of the `NONET` option.\n\n## Details\n`Nokogiri` is affected by series of vulnerabilities in libxml2 and libxslt, which are libraries it depends on. When handling the expansion of XML external entities (XXE) in libxml2, you can specify documents to be read. Opting into the `DTDLOAD` option and opting out of the `NONET` option in `Nokogiri` allows unknown documents to be loaded from the network. This can be used by attackers to load specially crafted XML documents on an internal XML parsing service and may lead to unauthorized disclosure of potentially sensitive information.\n\n**Note:** This vulnerability exists also in versions `< 1.5.4` regardless of the options opted into or out of. See information [here](https://snyk.io/vuln/SNYK-RUBY-NOKOGIRI-20298)\n\n## Remediation\nNokogiri suggests not to opt-out of `NONET` unless only trusted documents are being parsed.\nThere currently is no fix in libxml2 as of January 11th, 2017.\n`Nokogiri` will be waiting for a fix upstream to update.\n\n## Disclosure Timeline\n- January 11th, 2017 - Reported the issue to [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n- January 11th, 2017 - Issue triaged and acknowledged by [Mike Dalessio](https://github.com/flavorjones) of Nokogiri Core.\n\n## References\n- [Github Issue](https://github.com/sparklemotion/nokogiri/issues/1582)\n- [CVE-2016-9318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9318)\n",
+        "disclosureTime": "2017-01-11T21:00:00.000Z",
+        "from": [
+            "gjvis/vuln-in-shared-transitive@gjvis/vuln-in-shared-transitive#346a8be0d2540d754071a599eb19606583d60cf5",
+            "devise_invitable@1.6.1",
+            "devise@3.5.10",
+            "responders@2.3.0",
+            "railties@4.2.7.1",
+            "actionpack@4.2.7.1",
+            "actionview@4.2.7.1",
+            "rails-dom-testing@1.0.8",
+            "nokogiri@1.7.0.1"
+        ],
+        "id": "SNYK-RUBY-NOKOGIRI-20299",
+        "identifiers": {
+            "CVE": [],
+            "CWE": [
+                "CWE-611"
+            ]
+        },
+        "isPatchable": false,
+        "isUpgradable": false,
+        "language": "ruby",
+        "modificationTime": "2017-01-12T12:37:00.000Z",
+        "moduleName": "nokogiri",
+        "name": "nokogiri",
+        "packageManager": "rubygems",
+        "publicationTime": "2017-01-16T21:00:00.000Z",
+        "semver": {
+            "unaffected": [
+                "< 1.5.4"
+            ],
+            "vulnerable": [
+                ">= 1.5.4"
+            ]
+        },
+        "severity": "high",
+        "title": "XML External Entity (XXE)",
+        "upgradePath": [],
+        "version": "1.7.0.1"
+    }
+]
